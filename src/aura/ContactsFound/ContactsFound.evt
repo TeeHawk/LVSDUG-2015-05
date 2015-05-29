@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Indicates a collection of Contacts has been created">
+    <aura:attribute name="contactsList" type="Contact[]"/>
+</aura:event>

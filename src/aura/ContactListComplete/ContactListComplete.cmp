@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute access="public" name="records" type="Contact[]" required="true"/>
+    
+    <div>
+        <aura:iteration items="{!v.records}" var="item">
+            <c:ContactDetailComplete record="{!item}"/>
+        </aura:iteration>
+    </div>
+</aura:component>

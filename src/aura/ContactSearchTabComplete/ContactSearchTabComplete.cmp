@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="contacts" type="Contact[]"/>
+    
+    <c:ContactSearchComplete maxResults="5" contactsFoundEvent="{!c.searchResultsFound}"/>
+    <!--<c:ContactSearchAutoComplete maxResults="200" contactsFoundEvent="{!c.searchResultsFound}"/>-->
+    
+    <c:ContactListComplete records="{!v.contacts}"/>
+</aura:component>

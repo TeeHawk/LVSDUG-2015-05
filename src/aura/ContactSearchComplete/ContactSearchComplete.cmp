@@ -1,0 +1,10 @@
+<aura:component controller="ContactSearch">
+    <aura:attribute access="public" name="maxResults" type="Integer" default="10"/>
+    
+    <aura:registerEvent name="contactsFoundEvent" type="c:ContactsFound"/>
+    
+    <div>
+        <ui:inputText aura:id="searchTerm" label="Contact Name" placeholder="Enter a Contact Name"></ui:inputText>
+        <ui:button label="Search" press="{!c.search}"></ui:button>
+    </div>
+</aura:component>

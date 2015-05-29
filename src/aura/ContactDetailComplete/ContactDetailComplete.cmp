@@ -1,0 +1,13 @@
+<aura:component >
+	<aura:attribute access="public" name="record" type="Contact" required="true"/>
+    
+    <aura:registerEvent name="contactSelectedEvent" type="c:ContactSelected"/>
+    <aura:handler name="contactSelectedEvent" action="{!c.navigateToView}"/>
+    <aura:handler name="contactSelectedEvent" action="{!c.navigateToView2}"/>
+    
+    <div class="contactEntry" onclick="{!c.selectContact}">
+        <ui:outputText value="Name: "/><ui:outputText value="{!v.record.Name}"/><br/>
+        <ui:outputText value="Phone: "/><ui:outputPhone value="{!v.record.Phone ? v.record.Phone : 'N/A'}"/><br/>
+        <ui:outputText value="Email: "/><ui:outputEmail value="{!if( v.record.Email, v.record.Email, 'N/A' )}"/>
+    </div>
+</aura:component>
